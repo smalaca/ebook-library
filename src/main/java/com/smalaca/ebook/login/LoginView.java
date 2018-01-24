@@ -1,5 +1,7 @@
 package com.smalaca.ebook.login;
 
+import com.smalaca.ebook.communication.Response;
+
 import java.util.Scanner;
 
 public class LoginView {
@@ -16,5 +18,13 @@ public class LoginView {
         String login = scanner.next();
         System.out.println("Podaj hasło:");
         String password = scanner.next();
+
+        Response response = controller.login(login, password);
+
+        if (response.isSuccess()) {
+            System.out.println("Witaj " + login + ".");
+        } else {
+            System.out.println(response.getMessage());
+        }
     }
 }
