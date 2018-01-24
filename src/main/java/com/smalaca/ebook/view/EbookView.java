@@ -1,6 +1,9 @@
 package com.smalaca.ebook.view;
 
+import com.smalaca.ebook.domain.UserStorage;
+import com.smalaca.ebook.login.LoginController;
 import com.smalaca.ebook.login.LoginView;
+import com.smalaca.ebook.registration.RegistrationController;
 import com.smalaca.ebook.registration.RegistrationView;
 
 import java.util.Scanner;
@@ -13,11 +16,11 @@ public class EbookView {
     private final RegistrationView registrationView;
     private final LoginView loginView;
 
-    public EbookView() {
-        scanner = new Scanner(System.in);
+    public EbookView(Scanner scanner, UserStorage userStorage) {
+        this.scanner = scanner;
         mainManu = new MainManu();
-        registrationView = new RegistrationView(scanner);
-        loginView = new LoginView(scanner);
+        registrationView = new RegistrationView(this.scanner, new RegistrationController(userStorage));
+        loginView = new LoginView(this.scanner, new LoginController(userStorage));
     }
 
     public void show() {

@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class LoginView {
     private final Scanner scanner;
+    private final LoginController controller;
 
-    public LoginView(Scanner scanner) {
+    public LoginView(Scanner scanner, LoginController loginController) {
         this.scanner = scanner;
+        controller = loginController;
     }
 
     public void show() {
