@@ -12,4 +12,8 @@ public class User {
     String login() {
         return login;
     }
+
+    boolean hasPasswordEqualTo(String password) {
+        return this.password.equals(password);
+    }
 }

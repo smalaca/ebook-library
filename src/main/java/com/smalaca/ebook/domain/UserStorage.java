@@ -17,4 +17,12 @@ public class UserStorage {
     public boolean exists(String login) {
         return users.containsKey(login);
     }
+
+    public boolean exists(String login, String password) {
+        if (users.containsKey(login)) {
+            return users.get(login).hasPasswordEqualTo(password);
+        }
+
+        return false;
+    }
 }
