@@ -19,7 +19,8 @@ public class EbookView {
     public EbookView(Scanner scanner, UserStorage userStorage) {
         this.scanner = scanner;
         mainManu = new MainManu();
-        registrationView = new RegistrationView(this.scanner, new RegistrationController(userStorage));
+        registrationView = new RegistrationView(
+                new RegistrationController(userStorage), new CliSystemInterface(scanner));
         loginView = new LoginView(this.scanner, new LoginController(userStorage));
     }
 
