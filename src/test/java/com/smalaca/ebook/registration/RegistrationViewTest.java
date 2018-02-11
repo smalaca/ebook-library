@@ -1,10 +1,7 @@
 package com.smalaca.ebook.registration;
 
-import com.smalaca.ebook.communication.Response;
 import com.smalaca.ebook.view.SystemInterface;
 import org.junit.Test;
-import org.mockito.BDDMockito;
-import org.mockito.Mockito;
 
 import static com.smalaca.ebook.communication.Response.aFailureResponse;
 import static com.smalaca.ebook.communication.Response.aSuccessfuleResponse;
