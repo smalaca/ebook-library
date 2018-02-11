@@ -1,6 +1,7 @@
 package com.smalaca.ebook.registration;
 
 import com.smalaca.ebook.communication.Response;
+import com.smalaca.ebook.domain.User;
 import com.smalaca.ebook.view.SystemInterface;
 
 public class RegistrationView {
